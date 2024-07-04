@@ -249,7 +249,7 @@ class InvoiceController extends Controller
      * @return Response
      * @throws AuthorizationException
      */
-    public function show($invoice_id)
+    public function show($invoice_id): Response
     {
         $this->authorize('view_invoice');
         $basicInfo = Invoice::where('invoice_id', $invoice_id)->first();

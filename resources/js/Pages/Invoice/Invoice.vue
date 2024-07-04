@@ -22,7 +22,7 @@
                     <div class="flex flex-row w-full justify-between mb-3">
                         <div></div>
                         <div class="text-center">
-                            <strong><h2>IsDB-BISEW 4-Year Diploma Scholarship Program</h2></strong>
+                            <h2 class="font-bold">IsDB-BISEW 4-Year Diploma Scholarship Program</h2>
                         </div>
                         <div></div>
                     </div>
