@@ -1,14 +1,14 @@
 <template>
     <div class="pt-0 grid md:grid-cols-4">
         <div class="flex-col">
-            <inertia-link type="button" as="button" :href="create" v-if="can.create"
+            <inertia-link type="button" as="button" :href="create"
                 ><jet-button type="button">
                     <font-awesome-icon
                         icon="plus"
                         size="md"
                         rotation="rotate"
                     ></font-awesome-icon>
-                    Add New
+                    Criar Novo
                 </jet-button>
             </inertia-link>
         </div>

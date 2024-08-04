@@ -4,43 +4,10 @@
             as="button"
             type="button"
             :href="editUrl"
-            v-if="can.update"
         >
             <jet-button type="submit">
                 <font-awesome-icon
                     icon="pen"
-                    size="md"
-                    rotation="rotate"
-                ></font-awesome-icon>
-            </jet-button>
-        </inertia-link>
-
-        <inertia-link
-            as="button"
-            type="button"
-            :href="detailUrl"
-            v-if="detailUrl"
-            target="_blank"
-        >
-            <jet-button type="submit" class="btn-success">
-                <font-awesome-icon
-                    icon="info"
-                    size="md"
-                    rotation="rotate"
-                ></font-awesome-icon>
-            </jet-button>
-        </inertia-link>
-
-        <inertia-link
-            method="DELETE"
-            as="button"
-            type="button"
-            :href="deleteUrl"
-            v-if="can.delete"
-        >
-            <jet-button type="submit" class="btn-danger">
-                <font-awesome-icon
-                    icon="trash"
                     size="md"
                     rotation="rotate"
                 ></font-awesome-icon>
@@ -60,7 +27,6 @@ export default {
     name: "Actions",
     props: {
         editUrl: Boolean,
-        deleteUrl: Boolean,
         isDetails: Boolean,
         detailUrl: Boolean,
         can: {

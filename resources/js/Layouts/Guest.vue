@@ -1,26 +1,12 @@
 <template>
     <div class="min-h-screen min-w-screen bg-gray-100">
         <div>
-            <header id="top" class="w-full flex flex-col fixed sm:relative bg-white pin-t pin-r pin-l">
-                <nav id="site-menu" class="flex flex-col sm:flex-row w-full justify-between items-center px-4 sm:px-6 py-1 bg-white shadow sm:shadow-none border-t-4 border-red-900">
-                    <div class="w-full sm:w-auto self-start sm:self-center flex flex-row sm:flex-none flex-no-wrap justify-between items-center">
-                        <inertia-link href="/">
-                            <breeze-application-logo class="w-20 h-20 fill-current text-gray-500" />
-                        </inertia-link>
-                        <inertia-link v-if="$page.props.auth.user" href="/dashboard" class="text-sm text-gray-700 underline ml-4">
-                            Dashboard
-                        </inertia-link>
-                        <button id="menuBtn" class="hamburger block sm:hidden focus:outline-none" type="button" @click="navToggle">
-                            <span class="hamburger__top-bun"></span><span class="hamburger__bottom-bun"></span>
-                        </button>
-                    </div>
-                    <div id="menu" class="w-full sm:w-auto self-end sm:self-center sm:flex flex-col sm:flex-row items-center h-full py-1 pb-4 sm:py-0 sm:pb-0 hidden">
-                        <a v-for="(url, menu) in $page.props.public_menus" class="text-dark font-bold hover:text-red text-lg w-full no-underline sm:w-auto sm:pr-4 py-2 sm:py-1 sm:pt-2" :href="url" target="_blank">{{menu}}</a>
-                    </div>
-                </nav>
+            <header>
+                <slot name="header"></slot>
             </header>
             <main class="w-full">
-                <slot />
+                <slot></slot>
+           
             </main>
         </div>
     </div>
